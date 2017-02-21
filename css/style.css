@@ -1,0 +1,77 @@
+@font-face {
+	font-family: Bebas;
+	src: url("../fonts/bebas.ttf");
+}
+@font-face {
+	font-family: Open Sans;
+	src: url("../fonts/open_sans.ttf");
+}
+
+/*общие свойства*/
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+* {
+	list-style-type: none;
+}
+* {
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "Open Sans", Arial, sans-serif;
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+/*header menu*/
+.header_menu {
+	background-color: #4ccfc1;
+	position: relative;
+}
+.header_menu ul {
+	text-align: center;
+}
+.header_menu li {
+	display: inline-block;
+}
+.header_menu a {
+	font-family: "Bebas", Arial, sans-serif;
+	border-left: 1px solid white;
+	text-transform: uppercase;
+	color: white;
+	padding: 0 25px;
+	font-size: 18px;
+    line-height: 36px;
+}
+.header_menu li:first-child a {
+	border-left: none;
+}
+.header_menu li:hover > a{
+	color: #a1a1a1;
+}
+.dropdown {
+	position: absolute;
+	display: none;
+	background-color: #4ccfc1;
+}
+.header_menu li:hover .dropdown {
+	display: block;
+}
+.dropdown li {
+	display: block;
+}
