@@ -33,6 +33,7 @@ ul {
 }
 body {
 	font-family: "Open Sans", Arial, sans-serif;
+	background: white;
 	color: white;
 	padding: 0;
 	margin: 0;
@@ -41,15 +42,17 @@ body {
 /*header menu*/
 .header_menu {
 	background-color: #4ccfc1;
-	position: relative;
 }
 .header_menu ul {
 	text-align: center;
 }
-.header_menu li {
+.header_menu > ul > li {
 	display: inline-block;
+	position: relative;
+	margin-right: -4px;
+	cursor: pointer;
 }
-.header_menu a {
+.header_menu span {
 	font-family: "Bebas", Arial, sans-serif;
 	border-left: 1px solid white;
 	text-transform: uppercase;
@@ -57,21 +60,97 @@ body {
 	padding: 0 25px;
 	font-size: 18px;
     line-height: 36px;
+    transition: 0.4s ease-in-out;
 }
-.header_menu li:first-child a {
+.header_menu li:first-child span {
 	border-left: none;
 }
-.header_menu li:hover > a{
+.header_menu li:hover > span{
 	color: #a1a1a1;
 }
-.dropdown {
+
+/*Dropdown*/
+.header_menu li:hover ul.dropdown {
+	display: block;
+}
+ul.dropdown li {
+	font-family: "Bebas", Arial, sans-serif;
+	font-size: 18px;
+	position: relative;
+	width: 100px;
+	padding: 10px 0;
+}
+ul.dropdown {
 	position: absolute;
 	display: none;
 	background-color: #4ccfc1;
 }
-.header_menu li:hover .dropdown {
-	display: block;
+ul.dropdown > li:hover {
+	color: #a1a1a1;
 }
-.dropdown li {
+
+
+/*Submenu*/
+ul.submenu {
+	position: absolute;
+	display: none;
+}
+ul.dropdown li:hover ul.submenu {
 	display: block;
+	width: 100px;
+	left: 100px;
+	top: 0;
+	color: white;
+	background-color: #a1a1a1;
+}
+
+
+/*Left menu*/
+.left {
+	position: fixed;
+	width: 200px;
+	bottom: 0;
+	float: left;
+	top: 37px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: #48bbaf;
+}
+.left li {
+	border-bottom: 1px solid white;
+	padding: 20px;
+	text-align: center;
+}
+.left a {
+	font-family: "Bebas", Arial, sans-serif;
+	color: white;
+}
+.left li:hover {
+	background-color: #a1a1a1;
+	color: white;
+}
+
+
+
+.main_content {
+	float: left;
+	color: black;
+	margin-left: 200px;
+	width: 60%;
+	padding: 0 30px;
+}
+
+.right {
+	float: right;
+	background-color: #48bbaf;
+	margin: 30px 50px;
+	padding: 30px 30px 0 30px;
+	border-radius: 10px;
+}
+.right input {
+	margin-bottom: 30px;
+}
+label {
+	font-family: "Bebas", Arial, sans-serif;
+	color: white;
 }
