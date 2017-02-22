@@ -150,7 +150,14 @@ ul.dropdown li:hover ul.submenu {
 .right input {
 	margin-bottom: 30px;
 }
-label {
+form, input[type=submit] {
+	text-align: center;
 	font-family: "Bebas", Arial, sans-serif;
 	color: white;
+	background-color: #48bbaf;
+}
+input[type=submit] {
+	font-size: 12px;
+	padding: 5px 10px;
+	border-radius: 5px;
 }
